@@ -1,0 +1,31 @@
+body {
+    background-image: url("../images/sceneBack.jpg");
+    background-size: 1800px 800px
+}
+
+#letter0, #letter1, #letter2, #letter3, #letter4, #letter5, #letter6, #letter7, #letter8, #letter9, #letter10 {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+}
+
+.InstTitle {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.InstText {
+    font-family: 'Merriweather', serif;
+}
+
+
+#gameTitle {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+#wordListSize {
+    font-family: 'Merriweather', serif;
+    font-size: 18px
+}
+
+

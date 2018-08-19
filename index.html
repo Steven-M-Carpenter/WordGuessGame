@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Guess Game</title>
+
+    <!-- Bootstrap Javascipt -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
+
+    <!-- My CSS file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>   
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm-9 pt-5 text-warning" id="gameTitle">The Gallows - A Word Guess Game</h1>
+            <!-- <img src="assets/images/gallows.jpg" class="col-sm-3 float-right" id="gallowsIMG" alt="Picture of a wooden gallows" width="175px" height="180px"> -->
+    <div class="container">
+        <div class="row" id="gameInst">
+            <div class="col-sm-12 bg-transparent text-warning mt-1 mb-5">
+                <section class="instructionArea">
+                    <div class="aboutHeader pt-3 pb-1 border-bottom border-secondary">
+                        <h2 class="InstTitle" ><u>Instructions</u></h2>
+                        <p class="InstText ml-2" >Select a letter to see if it appears in the random word chosen from a <b id="wordListSize">150</b> item word list.  If you are correct, the letter appears in the proper sequence.  If you are wrong, the chose a new letter until you are out of turns.  Your turns start 5 higher than the lenght of the word.</p>
+                        <p></p>
+                        <h5 class="InstText ml-2">Good Luck!</h5>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row pt-2">
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1 pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter0">
+                <p class="letterText mb-1" id="ltr0">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1 pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter1">
+                <p class="letterText mb-1" id="ltr1">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1 pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter2">
+                <p class="letterText mb-1" id="ltr2">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1 pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter3">
+                <p class="letterText mb-1" id="ltr3">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1  pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter4">
+                <p class="letterText mb-1" id="ltr4">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1  pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter5">
+                <p class="letterText mb-1" id="ltr5">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1  pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter6">
+                <p class="letterText mb-1" id="ltr6">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1  pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter7">
+                <p class="letterText mb-1" id="ltr7">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1  pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter8">
+                <p class="letterText mb-1" id="ltr8">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1  pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter9">
+                <p class="letterText mb-1" id="ltr9">___</p>
+            </div>
+            <div class="col-sm-1 mt-3 mb-3 ml-1 mr-1  pt-1 pb-0 pl-0 pr-0 text-warning text-center" id="letter10">
+                <p class="letterText mb-1" id="ltr10">___</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <p></p>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <p></p>
+        </div>
+        <div class="col-sm-10">
+            <p></p>
+            <h6 class="metrics text-warning" id="p_wins">Wins:</h6>
+            <h6 class="metrics text-warning" id="p_losses">Losses:</h6>
+            <p></p>
+            <h6 class="metrics text-warning" id="p_guessesRemaining">Guesses:</h6>
+            <p></p>
+            <h6 class="metrics text-warning" id="p_lettersGuessed">Tried:</h6>
+        </div>
+    </div>
+
+</body>
+
+<script src="assets/javascript/game.js" type="text/javascript"></script>
+
+</html>
